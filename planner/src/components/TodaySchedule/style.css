@@ -8,5 +8,49 @@
 .task {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    width: 80%;
+    width: 70%;
+}
+
+.save {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 5%; 
+}
+
+.delete {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 5%; 
+}
+
+#today-schedule {
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+    /* border: 10px solid rgb(209, 209, 243); */
+}
+
+.fa-save {
+    color: #2E76CF;
+}
+
+.fa-save:hover {
+    color: #173b67;
+}
+
+.fa-save:active {
+    color: black;
+}
+
+.fa-trash-alt {
+    color: darkred;
+}
+
+.fa-trash-alt:hover {
+    color: rgb(58, 1, 1);
+}
+
+.fa-trash-alt:active {
+    color: black;
 }

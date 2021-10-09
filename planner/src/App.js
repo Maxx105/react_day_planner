@@ -13,11 +13,11 @@ function App() {
       <div className = "row">
         <div className="col-md-7 col-sm-12">
           <Title/>
+          <CurrentDate/>
           <TodaySchedule/>
           <ForTomorrow/>
         </div>
         <div className="col-md-5 col-sm-12">
-          <CurrentDate/>
           <TopPriorities/>
           <ToDoList/>
           <Notes/>

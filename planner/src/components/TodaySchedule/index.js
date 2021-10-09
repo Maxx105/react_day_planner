@@ -1,72 +1,83 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./style.css";
 
 function TodaySchedule() {
+    const times = ["6am-7am", "7am-8am", "8am-9am", "9am-10am", "11am-12pm", "12pm-1pm", "1pm-2pm", "2pm-3pm", "3pm-4pm", "4pm-5pm", "5pm-6pm", "6pm-7pm", "7pm-8pm", "8pm-9pm", "9pm-10pm"];
+    const [currentTask, setCurrentTask] = useState("");
+    const [currentTime, setCurrentTime] = useState("");
+    const [taskColors, setTaskColors] = useState([]);
+
+    useEffect(() => {
+        setSchedule();
+        getHourColor();
+    }, []);
+
+    function setTask(time) {
+        if (document.getElementById(time).innerHTML !== "") {
+            localStorage.setItem(time, document.getElementById(time).innerHTML);
+            setCurrentTask(document.getElementById(time).innerHTML);
+            setCurrentTime(document.getElementById(time).id);
+        } 
+    }
+
+    function setSchedule() {
+        for (let i = 0; i < times.length; i++) {
+            document.getElementById(times[i]).innerHTML = localStorage.getItem(times[i])
+        }
+    }
+
+    function deleteTask(time) {
+        localStorage.removeItem(time, document.getElementById(time).innerHTML);
+        setSchedule();
+    }
+
+    function getHourColor() {
+        const date = new Date();
+        const hour = date.getHours();
+        let colorsArray = [];
+        for (let i = 7; i < 22; i++) {
+            if (hour >= i && hour < i+1) {
+                colorsArray.push("pink")   
+            } else if (hour < i) {
+                colorsArray.push("lightgreen")
+            } else if (hour >= i+1) {
+                colorsArray.push("")
+            }
+        }
+        setTaskColors(colorsArray);
+    }
+
     return (
-        <div>
-            <h1>TODAY SCHEDULE</h1>
+        <div id="today-schedule" className = "shadow">
+            <h1>Today's Schedule</h1>
             <table className="table">
-                <tr>
-                    <th className="time">6am-7am</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">7am-8am</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">8am-9am</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">9am-10am</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">10am-11am</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">11am-12pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">12pm-1pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">2pm-3pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">3pm-4pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">4pm-5pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">5pm-6pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">6pm-7pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">7pm-8pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">8pm-9pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
-                <tr>
-                    <th className="time">9pm-10pm</th>
-                    <th className="task"><p></p></th>
-                </tr>
+                <tbody>
+                    {times.map((time, index) => (
+                        <tr key={time} style={{backgroundColor: taskColors[index]}}>
+                            <th className="time">{time}</th>
+                            <th className="task" id={time} contentEditable="true" onInput={() => setTask(time)}></th>
+                            <th className="delete" ><i className="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteTask" onClick={() => setCurrentTime(time)}></i></th>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
+            <div className="modal fade" id="deleteTask" tabIndex="-1" aria-labelledby="deleteTaskLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title" id="deleteTaskLabel">Delete Task</h5>
+                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div className="modal-body">
+                            Are you sure you want to delete this task?
+                        </div>
+                        <div className="modal-footer">
+                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" onClick={() => deleteTask(currentTime)} className="btn btn-danger" data-bs-dismiss="modal">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
