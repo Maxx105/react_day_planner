@@ -1,7 +1,7 @@
 import './App.css';
 import TodaySchedule from "./components/TodaySchedule";
 import Title from "./components/Title";
-import Date from "./components/Date";
+import CurrentDate from "./components/CurrentDate";
 import ForTomorrow from "./components/ForTomorrow";
 import ToDoList from "./components/ToDoList";
 import TopPriorities from "./components/TopPriorities";
@@ -17,7 +17,7 @@ function App() {
           <ForTomorrow/>
         </div>
         <div className="col-md-5 col-sm-12">
-          <Date/>
+          <CurrentDate/>
           <TopPriorities/>
           <ToDoList/>
           <Notes/>

@@ -4,7 +4,7 @@ import "./style.css";
 function Title() {
     return (
         <div>
-            <h1>DAILY PLANNER</h1>
+            <h1 id="title">DAILY PLANNER</h1>
         </div>
     );
 }
