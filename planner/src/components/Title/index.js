@@ -1,12 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function TodaySchedule() {
+function Title() {
     return (
         <div>
-            <h1>TODAY SCHEDULE</h1>
+            <h1>DAILY PLANNER</h1>
         </div>
     );
 }
 
-export default TodaySchedule;
+export default Title;
