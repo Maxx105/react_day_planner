@@ -54,3 +54,7 @@
 .fa-trash-alt:active {
     color: black;
 }
+
+.test {
+    background-color: rgba(216, 240, 216, 0.76)
+}

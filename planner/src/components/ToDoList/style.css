@@ -1,0 +1,21 @@
+#to-do-list {
+    background-color: palegoldenrod;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.toDoItemsTable {
+    /* border: 1px solid black;
+    border-radius: 15px; */
+    padding: 5px;
+    margin: 10px;
+}
+
+.toDoValue {
+    width: 99%;
+}
+
+.toDoDelete {
+    width: 1%;
+}

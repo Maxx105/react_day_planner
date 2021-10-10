@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "./style.css";
 
 function TodaySchedule() {
-    const times = ["6am-7am", "7am-8am", "8am-9am", "9am-10am", "11am-12pm", "12pm-1pm", "1pm-2pm", "2pm-3pm", "3pm-4pm", "4pm-5pm", "5pm-6pm", "6pm-7pm", "7pm-8pm", "8pm-9pm", "9pm-10pm"];
+    const times = ["6am-7am", "7am-8am", "8am-9am", "9am-10am", "10am-11am", "11am-12pm", "12pm-1pm", "1pm-2pm", "2pm-3pm", "3pm-4pm", "4pm-5pm", "5pm-6pm", "6pm-7pm", "7pm-8pm", "8pm-9pm", "9pm-10pm"];
     const [currentTask, setCurrentTask] = useState("");
     const [currentTime, setCurrentTime] = useState("");
     const [taskColors, setTaskColors] = useState([]);
@@ -35,11 +35,11 @@ function TodaySchedule() {
         const date = new Date();
         const hour = date.getHours();
         let colorsArray = [];
-        for (let i = 7; i < 22; i++) {
+        for (let i = parseInt(times[0][0]); i < times.length + parseInt(times[0][0]); i++) {
             if (hour >= i && hour < i+1) {
-                colorsArray.push("pink")   
+                colorsArray.push("rgb(247, 212, 218, 0.76)")   
             } else if (hour < i) {
-                colorsArray.push("lightgreen")
+                colorsArray.push("rgba(216, 240, 216, 0.76)")
             } else if (hour >= i+1) {
                 colorsArray.push("")
             }
