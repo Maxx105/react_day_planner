@@ -1,0 +1,23 @@
+#top-priorities {
+    background-color: rgb(238, 208, 170);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.top-priorities-list {
+    padding: 5px;
+    margin: 10px;
+}
+
+#priority-item {
+    font-size: 20px;
+}
+
+.priorityValue {
+    width: 99%;
+}
+
+.priorityDelete {
+    width: 1%;
+}

@@ -9,10 +9,10 @@ function WaterIntake() {
     }, []);
 
     function setInitialLocalStorageArray() {
-        if (JSON.parse(localStorage.getItem('react_day_water_intake_states')) === null) {
+        if (JSON.parse(localStorage.getItem('react_day_planner_water_intake_states')) === null) {
             setWaterIntakeBooleans(["", "", "", "", "", "", "", ""]);
         } else {
-            setWaterIntakeBooleans(JSON.parse(localStorage.getItem('react_day_water_intake_states')));
+            setWaterIntakeBooleans(JSON.parse(localStorage.getItem('react_day_planner_water_intake_states')));
         };
     }
 
@@ -26,7 +26,7 @@ function WaterIntake() {
             waterIntakeStatesArray[e.target.id] = ""
             e.target.style.backgroundColor = ""
         }
-        localStorage.setItem('react_day_water_intake_states', JSON.stringify(waterIntakeStatesArray));
+        localStorage.setItem('react_day_planner_water_intake_states', JSON.stringify(waterIntakeStatesArray));
         setWaterIntakeBooleans(waterIntakeStatesArray)
     }
 

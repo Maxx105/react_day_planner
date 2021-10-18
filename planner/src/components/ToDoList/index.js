@@ -21,7 +21,7 @@ function ToDoList() {
     function addToDoItem(e) {
         if (toDoItem){
             let toDoItemsArray = toDoItems;
-            if (toDoItemsArray.length != 0) {
+            if (toDoItemsArray.length !== 0) {
                 toDoItemsArray.push({toDoItem, checked, id:toDoItemsArray[toDoItemsArray.length - 1].id + 1});
             } else toDoItemsArray.push({toDoItem, checked, id:1});
             localStorage.setItem('react_day_planner_todos', JSON.stringify(toDoItemsArray));
@@ -37,7 +37,7 @@ function ToDoList() {
 
     function handleToDoItemCheckboxChange(e) {
         let toDoItemsStorage = JSON.parse(localStorage.getItem('react_day_planner_todos'));  
-        let index = toDoItemsStorage.findIndex((obj => obj.id == e.target.value));
+        let index = toDoItemsStorage.findIndex((obj => obj.id === e.target.value));
         toDoItemsStorage[index].checked = e.target.checked;
         localStorage.setItem('react_day_planner_todos', JSON.stringify(toDoItemsStorage));
         setToDoItems(JSON.parse(localStorage.getItem('react_day_planner_todos')));
@@ -45,7 +45,7 @@ function ToDoList() {
     
     function deleteToDoItem(e) {
         let toDoItemsStorage = JSON.parse(localStorage.getItem('react_day_planner_todos'));  
-        let index = toDoItemsStorage.findIndex((obj => obj.id == e.target.attributes[1].nodeValue));
+        let index = toDoItemsStorage.findIndex((obj => obj.id === e.target.attributes[1].nodeValue));
         toDoItemsStorage.splice(index, 1);
         localStorage.setItem('react_day_planner_todos', JSON.stringify(toDoItemsStorage));
         setToDoItems(JSON.parse(localStorage.getItem('react_day_planner_todos')));
