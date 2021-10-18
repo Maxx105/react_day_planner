@@ -1,6 +1,7 @@
 #current-datetime {
-    background-color: rgb(192, 219, 219);
+    background-color: rgb(188, 133, 130);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+    opacity: 0.75;
 }

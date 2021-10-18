@@ -1,8 +1,9 @@
 #to-do-list {
-    background-color: palegoldenrod;
+    background-color: rgb(237, 215, 194);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+    opacity: 0.75;
 }
 
 .toDoItemsTable {

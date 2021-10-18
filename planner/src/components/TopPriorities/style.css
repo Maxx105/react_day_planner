@@ -1,8 +1,9 @@
 #top-priorities {
-    background-color: rgb(238, 208, 170);
+    background-color: rgb(237, 215, 194);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+    opacity: 0.75;
 }
 
 .top-priorities-list {

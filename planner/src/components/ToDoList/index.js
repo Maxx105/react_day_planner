@@ -53,7 +53,7 @@ function ToDoList() {
 
     return (
         <div id="to-do-list" className = "shadow">
-            <h1>To Do List</h1>
+            <h1 className = "title-style">To Do List</h1>
             <div className="d-grid gap-2">
                 <button className="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#add-to-do-item">Add To Do Item</button>
             </div>

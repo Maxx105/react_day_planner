@@ -4,7 +4,7 @@ import "./style.css";
 function ForTomorrow() {
     return (
         <div id="for-tomorrow" className = "shadow">
-            <h1>For Tomorrow</h1>
+            <h1 className = "title-style">For Tomorrow</h1>
         </div>
     );
 }

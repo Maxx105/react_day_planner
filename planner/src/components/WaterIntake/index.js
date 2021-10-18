@@ -32,7 +32,7 @@ function WaterIntake() {
 
     return (
         <div id="water-intake" className = "shadow">
-            <h1 >Water Intake</h1>
+            <h1 className = "title-style">Water Intake</h1>
             <table>
                 <tbody>
                     <tr >

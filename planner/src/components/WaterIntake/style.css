@@ -1,8 +1,9 @@
 #water-intake {
-    background-color: rgb(170, 219, 238);
+    background-color: rgb(237, 215, 194);
     padding: 20px;
     margin: 20px;
     border-radius: 20px;
+    opacity: 0.75;
 }
 
 .tear {

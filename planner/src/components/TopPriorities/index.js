@@ -44,7 +44,7 @@ function TopPriorities() {
 
     return (
         <div id="top-priorities"  className = "shadow">
-            <h1>Top Priorities</h1>
+            <h1 className = "title-style">Top Priorities</h1>
             <div className="d-grid gap-2">
                 <button className="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#priority">Add a Priority</button>
             </div>

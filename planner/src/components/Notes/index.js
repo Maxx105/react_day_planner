@@ -4,7 +4,7 @@ import "./style.css";
 function Notes() {
     return (
         <div id="notes" className = "shadow">
-            <h1>Notes</h1>
+            <h1 className = "title-style">Notes</h1>
         </div>
     );
 }

@@ -17,16 +17,17 @@ function CurrentDate() {
     function setTime() {
         const d = new Date();
         setCurrentTime(d.toLocaleTimeString())
-    }
-
-    function clearStorage() {
-        
+        if (d.toLocaleTimeString() === "12:00:00 AM") {
+            localStorage.clear();
+            window.location.reload(true);
+        }
     }
 
     return (
         <div id="current-datetime" className = "shadow">
-            <h1>{currentDate}</h1>
-            <h1>{currentTime}</h1>
+            <h1 className = "title-style">{currentDate}</h1>
+            <hr/>
+            <h1 className = "title-style">{currentTime}</h1>
         </div>
     );
 }

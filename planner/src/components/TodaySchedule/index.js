@@ -46,7 +46,7 @@ function TodaySchedule() {
 
     return (
         <div id="today-schedule" className = "shadow">
-            <h1>Today's Schedule</h1>
+            <h1 className = "title-style">Today's Schedule</h1>
             <table className="table">
                 <tbody>
                     {times.map((time, index) => (
