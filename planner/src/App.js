@@ -5,6 +5,7 @@ import CurrentDate from "./components/CurrentDate";
 import ForTomorrow from "./components/ForTomorrow";
 import ToDoList from "./components/ToDoList";
 import TopPriorities from "./components/TopPriorities";
+import WaterIntake from "./components/WaterIntake";
 import Notes from "./components/Notes";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <div className="col-md-5 col-sm-12">
           <TopPriorities/>
           <ToDoList/>
+          <WaterIntake/>
           <Notes/>
         </div>
       </div>

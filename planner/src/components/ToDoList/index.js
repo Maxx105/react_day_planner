@@ -8,7 +8,6 @@ function ToDoList() {
 
     useEffect(() => {
         setInitialLocalStorageArray();
-        // setToDoItemsChecked();
     }, []);
 
     function setInitialLocalStorageArray() {
