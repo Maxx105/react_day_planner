@@ -43,10 +43,24 @@ function TopPriorities() {
     }
 
     return (
-        <div id="top-priorities"  className = "shadow">
-            <h1 className = "title-style">Top Priorities</h1>
-            <div className="d-grid gap-2">
-                <button className="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#priority">Add a Priority</button>
+        <div>
+            <div id="top-priorities"  className = "shadow">
+                <h1 className = "title-style">Top Priorities</h1>
+                <div className="d-grid gap-2">
+                    <button className="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#priority">Add a Priority</button>
+                </div>
+                <table className="top-priorities-list">
+                    <tbody>
+                        {priorities.map((priority, index) => (
+                            <tr key={index}>
+                                <th className="priorityValue">
+                                    <li id="priority-item"><strong>{priority.priority}</strong></li>
+                                </th>
+                                <th className="priorityDelete" ><i className="fas fa-trash-alt" value={priority.id} id={priority.priority} onClick={deletePriority}></i></th>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
             <div className="modal fade" id="priority" tabIndex="-1" aria-labelledby="priorityLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -67,18 +81,6 @@ function TopPriorities() {
                     </div>
                 </div>
             </div>
-            <table className="top-priorities-list">
-                <tbody>
-                    {priorities.map((priority, index) => (
-                        <tr key={index}>
-                            <th className="priorityValue">
-                                <li id="priority-item"><strong>{priority.priority}</strong></li>
-                            </th>
-                            <th className="priorityDelete" ><i className="fas fa-trash-alt" value={priority.id} id={priority.priority} onClick={deletePriority}></i></th>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
         </div>
     );
 }

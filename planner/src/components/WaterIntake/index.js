@@ -20,9 +20,9 @@ function WaterIntake() {
         let waterIntakeStatesArray = [];
         waterIntakeStatesArray = waterIntakeBooleans;
         if (waterIntakeStatesArray[e.target.id] === "") {
-            waterIntakeStatesArray[e.target.id] = "black"
-            e.target.style.backgroundColor = "black"
-        } else if (waterIntakeStatesArray[e.target.id] === "black") {
+            waterIntakeStatesArray[e.target.id] = "#817F66"
+            e.target.style.backgroundColor = "#817F66"
+        } else if (waterIntakeStatesArray[e.target.id] === "#817F66") {
             waterIntakeStatesArray[e.target.id] = ""
             e.target.style.backgroundColor = ""
         }

@@ -52,10 +52,31 @@ function ToDoList() {
     }
 
     return (
-        <div id="to-do-list" className = "shadow">
-            <h1 className = "title-style">To Do List</h1>
-            <div className="d-grid gap-2">
-                <button className="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#add-to-do-item">Add To Do Item</button>
+        <div>
+            <div id="to-do-list" className = "shadow">
+                <h1 className = "title-style">To Do List</h1>
+                <div className="d-grid gap-2">
+                    <button className="btn btn-dark" type="button" data-bs-toggle="modal" data-bs-target="#add-to-do-item">Add To Do Item</button>
+                </div>
+                <table className="toDoItemsTable">
+                    <tbody>
+                        {toDoItems.map((item, index) => (
+                            <tr key={index}>
+                                <th className="toDoValue">
+                                    <div className="form-check" key={index}>
+                                        <input className="form-check-input" type="checkbox" value={item.id} id={item.toDoItem} onChange={handleToDoItemCheckboxChange} 
+                                            checked={item.checked}
+                                        />
+                                        <label className="form-check-label">
+                                            <strong>{item.toDoItem}</strong>
+                                        </label>
+                                    </div>
+                                </th>
+                                <th className="toDoDelete" ><i className="fas fa-trash-alt" value={item.id} id={item.toDoItem} onClick={deleteToDoItem}></i></th>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
             <div className="modal fade" id="add-to-do-item" tabIndex="-1" aria-labelledby="add-to-do-itemLabel" aria-hidden="true">
                 <div className="modal-dialog">
@@ -76,25 +97,6 @@ function ToDoList() {
                     </div>
                 </div>
             </div>
-            <table className="toDoItemsTable">
-                <tbody>
-                    {toDoItems.map((item, index) => (
-                        <tr key={index}>
-                            <th className="toDoValue">
-                                <div className="form-check" key={index}>
-                                    <input className="form-check-input" type="checkbox" value={item.id} id={item.toDoItem} onChange={handleToDoItemCheckboxChange} 
-                                        checked={item.checked}
-                                    />
-                                    <label className="form-check-label">
-                                        <strong>{item.toDoItem}</strong>
-                                    </label>
-                                </div>
-                            </th>
-                            <th className="toDoDelete" ><i className="fas fa-trash-alt" value={item.id} id={item.toDoItem} onClick={deleteToDoItem}></i></th>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
         </div>
     );
 }

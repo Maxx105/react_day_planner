@@ -1,8 +1,13 @@
 #title {
-    background-color: rgb(188, 133, 130);
+    background-color: rgb(237, 215, 194);
     /* padding: 20px; */
     margin: 20px;
+    padding: 15px;
     border-radius: 20px;
+    border: 5px solid rgb(188, 133, 130);
     opacity: 0.75;
+}
+
+#title-font-style {
     font-size: 64px;
 }
