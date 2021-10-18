@@ -3,7 +3,7 @@ import "./style.css";
 
 function Notes() {
     return (
-        <div>
+        <div id="notes" className = "shadow">
             <h1>Notes</h1>
         </div>
     );

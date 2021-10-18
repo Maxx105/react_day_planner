@@ -21,7 +21,7 @@ function TopPriorities() {
         setPriority(e.target.value);
     }
 
-    function addToDoItem(e) {
+    function addPriority(e) {
         if (priority){
             let prioritiesArray = priorities;
             if (prioritiesArray.length !== 0) {
@@ -62,7 +62,7 @@ function TopPriorities() {
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addToDoItem}>Add</button>
+                            <button type="button" className="btn btn-primary" data-bs-dismiss="modal" onClick={addPriority}>Add</button>
                         </div>
                     </div>
                 </div>

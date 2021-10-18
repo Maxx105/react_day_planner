@@ -37,7 +37,7 @@ function ToDoList() {
 
     function handleToDoItemCheckboxChange(e) {
         let toDoItemsStorage = JSON.parse(localStorage.getItem('react_day_planner_todos'));  
-        let index = toDoItemsStorage.findIndex((obj => obj.id === e.target.value));
+        let index = toDoItemsStorage.findIndex((obj => obj.id === parseInt(e.target.value)));
         toDoItemsStorage[index].checked = e.target.checked;
         localStorage.setItem('react_day_planner_todos', JSON.stringify(toDoItemsStorage));
         setToDoItems(JSON.parse(localStorage.getItem('react_day_planner_todos')));

@@ -1,3 +1,6 @@
 #title {
-    color: blue;
+    background-color: rgb(127, 127, 128);
+    /* padding: 20px; */
+    margin: 20px;
+    border-radius: 20px;
 }

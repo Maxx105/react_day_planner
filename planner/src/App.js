@@ -16,13 +16,13 @@ function App() {
           <Title/>
           <CurrentDate/>
           <TodaySchedule/>
-          <ForTomorrow/>
         </div>
         <div className="col-md-5 col-sm-12">
           <TopPriorities/>
           <ToDoList/>
           <WaterIntake/>
           <Notes/>
+          <ForTomorrow/>
         </div>
       </div>
     </div>

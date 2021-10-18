@@ -5,11 +5,6 @@ function CurrentDate() {
     const [currentDate, setCurrentDate] = useState('');
     const [currentTime, setCurrentTime] = useState(setInterval(setTime,1000));
 
-    function setTime() {
-        const d = new Date();
-        setCurrentTime(d.toLocaleTimeString())
-    }
-
     useEffect(() => {
         let date = new Date();
         let day = date.getDate();
@@ -19,8 +14,17 @@ function CurrentDate() {
         setInterval(setTime(), 1000);
     }, []);
 
+    function setTime() {
+        const d = new Date();
+        setCurrentTime(d.toLocaleTimeString())
+    }
+
+    function clearStorage() {
+        
+    }
+
     return (
-        <div>
+        <div id="current-datetime" className = "shadow">
             <h1>{currentDate}</h1>
             <h1>{currentTime}</h1>
         </div>
