@@ -6,3 +6,9 @@
     border: 5px solid rgb(188, 133, 130);
     opacity: 0.75;
 }
+
+.notes-row {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+

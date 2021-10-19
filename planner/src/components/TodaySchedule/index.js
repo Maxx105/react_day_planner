@@ -45,19 +45,21 @@ function TodaySchedule() {
     }
 
     return (
-        <div id="today-schedule" className = "shadow">
-            <h1 className = "title-style">Today's Schedule</h1>
-            <table className="table">
-                <tbody>
-                    {times.map((time, index) => (
-                        <tr key={time} style={{backgroundColor: taskColors[index]}}>
-                            <th className="time">{time}</th>
-                            <th className="task" id={time} contentEditable="true" onInput={() => setTask(time)}></th>
-                            <th className="delete" ><i className="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteTask" onClick={() => setCurrentTime(time)}></i></th>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+        <div>
+            <div id="today-schedule" className = "shadow">
+                <h1 className = "title-style">Today's Schedule</h1>
+                <table className="table">
+                    <tbody>
+                        {times.map((time, index) => (
+                            <tr key={time} style={{backgroundColor: taskColors[index]}}>
+                                <th className="time">{time}</th>
+                                <th className="task" id={time} contentEditable="true" onInput={() => setTask(time)}></th>
+                                <th className="delete" ><i className="fas fa-trash-alt" data-bs-toggle="modal" data-bs-target="#deleteTask" onClick={() => setCurrentTime(time)}></i></th>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
             <div className="modal fade" id="deleteTask" tabIndex="-1" aria-labelledby="deleteTaskLabel" aria-hidden="true">
                 <div className="modal-dialog">
                     <div className="modal-content">
