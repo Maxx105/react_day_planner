@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react_day_planner/static/css/main.ca988684.chunk.css",
+    "main.js": "/react_day_planner/static/js/main.54e83f87.chunk.js",
+    "main.js.map": "/react_day_planner/static/js/main.54e83f87.chunk.js.map",
+    "runtime-main.js": "/react_day_planner/static/js/runtime-main.76ada1f2.js",
+    "runtime-main.js.map": "/react_day_planner/static/js/runtime-main.76ada1f2.js.map",
+    "static/js/2.8b0f3859.chunk.js": "/react_day_planner/static/js/2.8b0f3859.chunk.js",
+    "static/js/2.8b0f3859.chunk.js.map": "/react_day_planner/static/js/2.8b0f3859.chunk.js.map",
+    "index.html": "/react_day_planner/index.html",
+    "static/css/main.ca988684.chunk.css.map": "/react_day_planner/static/css/main.ca988684.chunk.css.map",
+    "static/js/2.8b0f3859.chunk.js.LICENSE.txt": "/react_day_planner/static/js/2.8b0f3859.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/react_day_planner/static/media/fall.db391345.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76ada1f2.js",
+    "static/js/2.8b0f3859.chunk.js",
+    "static/css/main.ca988684.chunk.css",
+    "static/js/main.54e83f87.chunk.js"
+  ]
+}
