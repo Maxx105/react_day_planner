@@ -38,7 +38,7 @@ function Notes() {
                 </tbody>
             </table>
             <div className="d-grid gap-2">
-                <button onClick={clearNotesStorage} className="btn btn-danger">Clear Notes</button>
+                <button onClick={clearNotesStorage} className="btn btn-maroon">Clear Notes</button>
             </div>
         </div>
     );

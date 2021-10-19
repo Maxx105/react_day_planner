@@ -12,3 +12,8 @@
     width: 100%;
 }
 
+.btn-maroon {
+    background-color: maroon !important;
+    color: white !important;
+}
+
